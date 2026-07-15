@@ -51,12 +51,53 @@ import numpy as np
 
 
 #making bar chart
-categories=["grains","fruit","vegetable","protein","diary","sweets"]
-values=np.array([4,3,2,5,3,1])
-plt.bar(categories,values,color="skyblue")
-# plt.barh(categories,values,color="skyblue")
+# categories=["grains","fruit","vegetable","protein","diary","sweets"]
+# values=np.array([4,3,2,5,3,1])
+# plt.bar(categories,values,color="skyblue")
+# # plt.barh(categories,values,color="skyblue")
+#
+# plt.title("Daily Consumption")
+# plt.xlabel("Food")
+# plt.ylabel("Quantity")
+# plt.show()
+#
 
-plt.title("Daily Consumption")
-plt.xlabel("Food")
-plt.ylabel("Quantity")
+#piechart
+# categories=["Freshman","sophomores","Juniors","Seniors"]
+# values=np.array([300,250,275,225])
+# colors=["red","yellow","blue","green"]
+# plt.pie(values,labels=categories,autopct="%1.1f%%" ,colors=colors,
+#         explode=[0,0,0,0.1],
+#         shadow=True,
+#         startangle=90)
+#
+# plt.title("Pie CHart")
+#
+# plt.show()
+
+
+
+#scatter graph=shows the relationship between two variables
+#              helps to identify a correlation(+,-,None)
+#               Example:study hours vs test scores
+
+
+x1=[0,1,1,2,3,4,5,6,7,7,8]
+y1=[11,19,20,30,40,48,59,67,73,78,87]
+
+x2=np.array([0,1,2,3,4,5,6,7,8,9])
+y2=np.array([50,65,67,70,72,78,80,82,87,93])
+plt.scatter(x1,y1,color="skyblue",
+            alpha=0.5,
+            s=200,
+            label="class-A")
+plt.scatter(x2,y2,alpha=0.5,color="red",
+            s=200,
+            label="class-B")
+
+plt.title("Test Scores")
+plt.xlabel("Hours studied")
+plt.ylabel("Grades Obtained")
+
+plt.legend()
 plt.show()
